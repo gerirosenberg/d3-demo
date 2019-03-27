@@ -74,7 +74,7 @@ window.onload = function(){
 
     // y-axis scale
     var y = d3.scaleLinear()
-    	.range([415, 130])
+    	.range([450, 50])
     	.domain([0, 1600000]);
 
     // color scale generator
