@@ -20,8 +20,13 @@ window.onload = function(){
 
 	// inner rectangle block
 	var innerRect = container.append("rect")
+		.datum(400)
 		// set width
-		.attr(width, 800)
+		.attr(width, function(d){
+			return d * 2;
+		}
 		// set height
-		.attr(height, 400)
+		.attr(height, function(d){
+			return d;
+		}
 };
