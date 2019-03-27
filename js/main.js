@@ -88,6 +88,7 @@ window.onload = function(){
     		maxPop
     	]);
 
+    // create circles
 	var circles = container.selectAll(".circles")
 		.data(cityPop)
 		.enter()
@@ -152,7 +153,7 @@ window.onload = function(){
 		});
 
 	// y axis generator
-    var yAxis = d3.axisLeft(y)
+    var yAxis = d3.svg.axis()
         .scale(y)
         .orient("left");
 
