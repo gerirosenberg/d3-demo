@@ -153,7 +153,7 @@ window.onload = function(){
 		});
 
 	// y axis generator
-    var yAxis = d3.svg.axis()
+    var yAxis = d3.axisLeft()
         .scale(y)
         .orient("left");
 
