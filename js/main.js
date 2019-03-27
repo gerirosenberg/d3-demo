@@ -69,12 +69,12 @@ window.onload = function(){
 
     // x-axis scale
     var x = d3.scaleLinear()
-    	.range([90, 755]) // output min and max
+    	.range([100, 675]) // output min and max
     	.domain([0, 3]); // input min and max
 
     // y-axis scale
     var y = d3.scaleLinear()
-    	.range([435, 95])
+    	.range([400, 130])
     	.domain([
     		minPop,
     		maxPop
