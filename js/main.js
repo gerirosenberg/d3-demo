@@ -125,7 +125,7 @@ window.onload = function(){
 		.attr("text-anchor", "left")
 		.attr("x", function(d,i){
 			// how far to the right of each circle
-			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI)
+			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI + 5)
 		})
 		.attr("y", function(d){
 			// vertical position centered on each circle
