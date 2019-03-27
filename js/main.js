@@ -80,6 +80,17 @@ window.onload = function(){
     		maxPop
     	]);
 
+    // color scale generator
+    var color = d3.scaleLinear()
+    	.range([
+    		"#FDBE85",
+    		"#D94701"
+    	])
+    	.domain([
+    		minPop,
+    		maxPop
+    	]);
+
 	var circles = container.selectAll(".circles")
 		.data(cityPop)
 		.enter()
@@ -98,4 +109,10 @@ window.onload = function(){
 		.attr("cy", function(d){
 			return y(d.population);
 		});
+		// add fill color based on pop
+		.style("fill", function(d, i){
+			return color(d.population);
+		})
+		// black circle stroke
+		.style("stroke", "#000");
 };
