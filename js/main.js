@@ -123,16 +123,32 @@ window.onload = function(){
 		.append("text")
 		.attr("class", "labels")
 		.attr("text-anchor", "left")
-		.attr("x", function(d,i){
-			// how far to the right of each circle
-			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI + 5)
-		})
 		.attr("y", function(d){
 			// vertical position centered on each circle
 			return y(d.population) + 5;
 		})
+
+	// first line of label
+	var nameLine = labels.append("tspan")
+		.attr("class", "nameLine")
+		.attr("x", function(d, i){
+			// position to right of each circle
+			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI)
+		})
 		.text(function(d){
-			return d.city + ", Pop. " + d.population;
+			return d.city;
+		});
+
+	// second line of label
+	var popLine = labels.append("tspan")
+		.attr("class", "popLine")
+		.attr("x", function(d, i){
+			// position to the right of each circle
+			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI)
+		})
+		.attr("dy", "15") // vertical offset
+		.text(function(d){
+			return "Pop. " + d.population;
 		});
 
 	// add title
