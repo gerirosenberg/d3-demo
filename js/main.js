@@ -63,10 +63,9 @@ window.onload = function(){
 		.append("circle")
 		.attr("class", "circles")
 		.attr("id", function(d){
-			console.log("d:", d, "i:", i);
 			return d.city;
 		})
-		.attr("r", function(d){
+		.attr("r", function(d, i){
 			var area = d.population * 0.01;
 			return Math.sqrt(area/Math.PI);
 		})
