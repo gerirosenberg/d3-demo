@@ -38,21 +38,42 @@ window.onload = function(){
 		// fill color
 		.style("fill", "#FFFFFF");
 
-	var dataArray = [10, 20, 30, 40, 50];
+    var cityPop = [
+        { 
+            city: 'Madison',
+            population: 233209
+        },
+        {
+            city: 'Milwaukee',
+            population: 594833
+        },
+        {
+            city: 'Green Bay',
+            population: 104057
+        },
+        {
+            city: 'Superior',
+            population: 27244
+        }
+    ];
 
 	var circles = container.selectAll(".circles")
-		.data(dataArray)
+		.data(cityPop)
 		.enter()
 		.append("circle")
 		.attr("class", "circles")
-		.attr("r", function(d, i){
+		.attr("id", function(d){
 			console.log("d:", d, "i:", i);
-			return d;
+			return d.city;
+		})
+		.attr("r", function(d){
+			var area = d.population * 0.01;
+			return Math.sqrt(area/Math.PI);
 		})
 		.attr("cx", function(d, i){
-			return 70 + (i * 180);
+			return 90 + (i * 180);
 		})
 		.attr("cy", function(d){
-			return 450 - (d * 5);
+			return 450 - (d.population * 0.0005);
 		});
 };
