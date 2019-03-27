@@ -22,11 +22,11 @@ window.onload = function(){
 	var innerRect = container.append("rect")
 		.datum(400)
 		// set width
-		.attr(width, function(d){
+		.attr("width", function(d){
 			return d * 2;
 		})
 		// set height
-		.attr(height, function(d){
+		.attr("height", function(d){
 			return d;
 		})
 		// class name
