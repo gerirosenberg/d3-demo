@@ -133,7 +133,7 @@ window.onload = function(){
 		.attr("class", "nameLine")
 		.attr("x", function(d, i){
 			// position to right of each circle
-			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI)
+			return x(i) + 5 + Math.sqrt(d.population * 0.01 / Math.PI)
 		})
 		.text(function(d){
 			return d.city;
@@ -144,7 +144,7 @@ window.onload = function(){
 		.attr("class", "popLine")
 		.attr("x", function(d, i){
 			// position to the right of each circle
-			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI)
+			return x(i) + 5 + Math.sqrt(d.population * 0.01 / Math.PI)
 		})
 		.attr("dy", "15") // vertical offset
 		.text(function(d){
