@@ -153,9 +153,7 @@ window.onload = function(){
 		});
 
 	// y axis generator
-    var yAxis = d3.axisLeft()
-        .scale(y)
-        .orient("left");
+    var yAxis = d3.axisLeft(y);
 
     // create axis g element and add axis
     var axis = container.append("g")
