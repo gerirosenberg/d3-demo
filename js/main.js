@@ -37,4 +37,22 @@ window.onload = function(){
 		.attr("y", 50)
 		// fill color
 		.style("fill", "#FFFFFF");
+
+	var dataArray = [10, 20, 30, 40, 50];
+
+	var circles = container.selectAll(".circles")
+		.data(dataArray)
+		.enter()
+		.append("circle")
+		.attr("class", "circles")
+		.attr("r", function(d, i){
+			console.log("d:", d, "i:", i);
+			return d;
+		})
+		.attr("cx", function(d, i){
+			return 70 + (i * 180);
+		})
+		.attr("cy", function(d){
+			return 450 - (d * 5);
+		});
 };
