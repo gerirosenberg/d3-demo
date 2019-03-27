@@ -17,4 +17,13 @@ window.onload = function(){
 		.attr("class", "container")
 		// assign a background color
 		.style("background-color", "rgba(0,0,0,0.2)");
+
+	// inner rectangle block
+	var innerRect = container.append("rect")
+		.datum(400)
+		// set width
+		.attr(width, 800)
+		// set height
+		.attr(height, 400)
+	console.log(innerRect);
 };
