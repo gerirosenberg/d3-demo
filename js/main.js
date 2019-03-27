@@ -108,7 +108,7 @@ window.onload = function(){
 		})
 		.attr("cy", function(d){
 			return y(d.population);
-		});
+		})
 		// add fill color based on pop
 		.style("fill", function(d, i){
 			return color(d.population);
