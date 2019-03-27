@@ -94,7 +94,7 @@ window.onload = function(){
     // y axis generator
     var yAxis = d3.axisLeft(y)
     	.scale(y)
-    	.orient("left");
+    	.orient("left")
 
     // create axis g element and add axis
     var axis = container.append("g")
