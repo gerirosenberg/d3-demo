@@ -24,10 +24,11 @@ window.onload = function(){
 		// set width
 		.attr(width, function(d){
 			return d * 2;
-		}
+		})
 		// set height
 		.attr(height, function(d){
 			return d;
+		})
 		// class name
 		.attr("class", "innerRect")
 		// position from left
@@ -36,5 +37,4 @@ window.onload = function(){
 		.attr("y", 50)
 		// fill color
 		.style("fill", "#FFFFFF");
-		}
 };
