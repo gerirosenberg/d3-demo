@@ -28,5 +28,13 @@ window.onload = function(){
 		// set height
 		.attr(height, function(d){
 			return d;
+		// class name
+		.attr("cla", "innerRect")
+		// position from left
+		.attr("x", 50)
+		// position from top
+		.attr("y", 50)
+		// fill color
+		.style("fill", "#FFFFFF");
 		}
 };
