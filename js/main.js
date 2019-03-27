@@ -116,6 +116,25 @@ window.onload = function(){
 		// black circle stroke
 		.style("stroke", "#000");
 
+	// create circle labels
+	var labels = container.selectAll(".labels")
+		.data(cityPop)
+		.enter()
+		.append("text")
+		.attr("class", "labels")
+		.attr("text-anchor", "left")
+		.attr("x", function(d,i){
+			// how far to the right of each circle
+			return x(i) + Math.sqrt(d.population * 0.01 / Math.PI)
+		})
+		.attr("y", function(d){
+			// vertical position centered on each circle
+			return y(d.population) + 5;
+		})
+		.text(function(d){
+			return d.city + ", Pop. " + d.population;
+		});
+
 	// add title
 	var title = container.append("text")
 		.attr("class", "title")
