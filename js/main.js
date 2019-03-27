@@ -125,7 +125,7 @@ window.onload = function(){
 		.attr("text-anchor", "left")
 		.attr("y", function(d){
 			// vertical position centered on each circle
-			return y(d.population) - 5;
+			return y(d.population) - 4;
 		})
 
 	// first line of label
