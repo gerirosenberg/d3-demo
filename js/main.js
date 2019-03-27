@@ -115,4 +115,12 @@ window.onload = function(){
 		})
 		// black circle stroke
 		.style("stroke", "#000");
+
+	// add title
+	var title = container.append("text")
+		.attr("class", "title")
+		.attr("text-anchor", "middle")
+		.attr("x", 450)
+		.attr("y", 30)
+		.text("City Populations");
 };
