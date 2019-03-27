@@ -92,7 +92,7 @@ window.onload = function(){
     	]);
 
     // y axis generator
-    var yAxis = d3.axisLeft(y);
+    var yAxis = d3.axisLeft(y)
     	.scale(y)
     	.orient("left");
 
