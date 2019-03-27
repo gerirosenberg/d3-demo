@@ -75,10 +75,7 @@ window.onload = function(){
     // y-axis scale
     var y = d3.scaleLinear()
     	.range([415, 130])
-    	.domain([
-    		minPop,
-    		maxPop
-    	]);
+    	.domain([0, 1700000]);
 
     // color scale generator
     var color = d3.scaleLinear()
@@ -153,6 +150,17 @@ window.onload = function(){
 		.text(function(d){
 			return "Pop. " + format(d.population);
 		});
+
+	// y axis generator
+    var yAxis = d3.axisLeft(y)
+        .scale(y)
+        .orient("left");
+
+    // create axis g element and add axis
+    var axis = container.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(50, 0)")
+        .call(yAxis);
 
 	// add title
 	var title = container.append("text")
