@@ -57,6 +57,29 @@ window.onload = function(){
         }
     ];
 
+    // find min value of array
+    var minPop = d3.min(cityPop, function(d){
+    	return d.population;
+    });
+
+    // find max value of array
+    var maxPop = d3.max(cityPop, function(d){
+    	return d.population;
+    });
+
+    // x-axis scale
+    var x = d3.scaleLinear()
+    	.range([90, 810]) // output min and max
+    	.domain([0, 3]); // input min and max
+
+    // y-axis scale
+    var y = d3.scaleLinear()
+    	.range([440, 95])
+    	.domain([
+    		minPop,
+    		maxPop
+    	]);
+
 	var circles = container.selectAll(".circles")
 		.data(cityPop)
 		.enter()
@@ -70,9 +93,9 @@ window.onload = function(){
 			return Math.sqrt(area/Math.PI);
 		})
 		.attr("cx", function(d, i){
-			return 90 + (i * 180);
+			return x(i);
 		})
 		.attr("cy", function(d){
-			return 450 - (d.population * 0.0005);
+			return y(d.population);
 		});
 };
