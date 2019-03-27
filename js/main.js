@@ -29,7 +29,7 @@ window.onload = function(){
 		.attr(height, function(d){
 			return d;
 		// class name
-		.attr("cla", "innerRect")
+		.attr("class", "innerRect")
 		// position from left
 		.attr("x", 50)
 		// position from top
