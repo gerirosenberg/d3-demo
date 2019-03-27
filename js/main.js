@@ -40,20 +40,20 @@ window.onload = function(){
 
     var cityPop = [
         { 
-            city: 'Madison',
-            population: 233209
+            city: 'Washington',
+            population: 702455
         },
         {
-            city: 'Milwaukee',
-            population: 594833
+            city: 'Baltimore',
+            population: 611648
         },
         {
-            city: 'Green Bay',
-            population: 104057
+            city: 'Pittsburgh',
+            population: 302407
         },
         {
-            city: 'Superior',
-            population: 27244
+            city: 'Philadelphia',
+            population: 1581000
         }
     ];
 
