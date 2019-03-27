@@ -69,7 +69,7 @@ window.onload = function(){
 
     // x-axis scale
     var x = d3.scaleLinear()
-    	.range([90, 810]) // output min and max
+    	.range([90, 790]) // output min and max
     	.domain([0, 3]); // input min and max
 
     // y-axis scale
@@ -139,6 +139,9 @@ window.onload = function(){
 			return d.city;
 		});
 
+	// format generator
+	var format = d3.format(",");
+
 	// second line of label
 	var popLine = labels.append("tspan")
 		.attr("class", "popLine")
@@ -148,7 +151,7 @@ window.onload = function(){
 		})
 		.attr("dy", "15") // vertical offset
 		.text(function(d){
-			return "Pop. " + d.population;
+			return "Pop. " + format(d.population);
 		});
 
 	// add title
