@@ -74,7 +74,7 @@ window.onload = function(){
 
     // y-axis scale
     var y = d3.scaleLinear()
-    	.range([400, 130])
+    	.range([415, 130])
     	.domain([
     		minPop,
     		maxPop
