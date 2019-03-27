@@ -69,7 +69,7 @@ window.onload = function(){
 
     // x-axis scale
     var x = d3.scaleLinear()
-    	.range([90, 760]) // output min and max
+    	.range([90, 755]) // output min and max
     	.domain([0, 3]); // input min and max
 
     // y-axis scale
@@ -125,7 +125,7 @@ window.onload = function(){
 		.attr("text-anchor", "left")
 		.attr("y", function(d){
 			// vertical position centered on each circle
-			return y(d.population) - 4;
+			return y(d.population) - 3;
 		})
 
 	// first line of label
